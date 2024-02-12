@@ -4,15 +4,16 @@
 @endsection
 @section('content')
     <h1>Movies:</h1>
-    <ul>
+
+    <div class="card">
         @foreach ($movies as $movie)
-           <li>
-            {{ $movie -> title }}
-            {{ $movie -> original_title }}
-            {{ $movie -> nationality }}
-            {{ $movie -> date }}
-            {{ $movie -> vote }}
-           </li>
+        <div class="movie">
+        <h2>{{ $movie -> title }} </h2>
+        <p>Titolo originale: {{ $movie -> original_title }}</p>
+        <p>Nazionalità: {{ $movie -> nationality }}</p>
+        <p>Data d'uscita: {{ $movie -> date }}</p>
+        <p>Voto: {{ $movie -> vote }}</p>
+        </div>
         @endforeach
-    </ul>
+        </div>
 @endsection
